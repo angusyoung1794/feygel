@@ -1,0 +1,244 @@
+/* Анимация салюта */
+@keyframes firework {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(1);
+    opacity: 0;
+  }
+}
+
+.firework {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: firework 1.5s ease-out forwards;
+  --x: calc((var(--random-x, 0.5) - 0.5) * 400px);
+  --y: calc((var(--random-y, 0.5) - 0.5) * 400px);
+}
+
+.firework::before,
+.firework::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #D4AF37, #FFD700, #FFF);
+}
+
+.firework:nth-child(4n) {
+  background: radial-gradient(circle, #8B5CF6, #A78BFA, #FFF);
+  box-shadow: 0 0 20px #8B5CF6, 0 0 40px #A78BFA;
+}
+
+.firework:nth-child(4n+1) {
+  background: radial-gradient(circle, #D4AF37, #FFD700, #FFF);
+  box-shadow: 0 0 20px #D4AF37, 0 0 40px #FFD700;
+}
+
+.firework:nth-child(4n+2) {
+  background: radial-gradient(circle, #C4B5FD, #FFF, #FFF);
+  box-shadow: 0 0 20px #C4B5FD, 0 0 40px #FFF;
+}
+
+.firework:nth-child(4n+3) {
+  background: radial-gradient(circle, #FBBF24, #FFF, #FFF);
+  box-shadow: 0 0 20px #FBBF24, 0 0 40px #FFF;
+}
+
+/* Анимация конфетти */
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.confetti-piece {
+  position: fixed;
+  top: -20px;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, #8B5CF6, #D4AF37);
+  animation: confetti-fall 3s linear forwards;
+  z-index: 30;
+}
+
+.confetti-piece:nth-child(2n) {
+  background: linear-gradient(135deg, #A78BFA, #FFD700);
+  width: 8px;
+  height: 12px;
+}
+
+.confetti-piece:nth-child(3n) {
+  background: linear-gradient(135deg, #C4B5FD, #FBBF24);
+  width: 12px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.confetti-piece:nth-child(4n) {
+  background: linear-gradient(135deg, #FFF, #D4AF37);
+  width: 6px;
+  height: 6px;
+}
+
+/* Анимация воздушных шаров */
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) translateX(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(50vh) translateX(20px) rotate(5deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(-10px) rotate(-5deg);
+    opacity: 0;
+  }
+}
+
+.balloons-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 50px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: float-up 6s ease-in infinite;
+  opacity: 0;
+}
+
+.balloon:nth-child(1) {
+  background: linear-gradient(135deg, #8B5CF6, #A78BFA);
+  box-shadow: inset -10px -10px 20px rgba(0,0,0,0.1), 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+.balloon:nth-child(2) {
+  background: linear-gradient(135deg, #D4AF37, #FFD700);
+  box-shadow: inset -10px -10px 20px rgba(0,0,0,0.1), 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.balloon:nth-child(3) {
+  background: linear-gradient(135deg, #C4B5FD, #E9D5FF);
+  box-shadow: inset -10px -10px 20px rgba(0,0,0,0.1), 0 0 20px rgba(196, 181, 253, 0.4);
+}
+
+.balloon:nth-child(4) {
+  background: linear-gradient(135deg, #FFF, #F3F4F6);
+  box-shadow: inset -10px -10px 20px rgba(0,0,0,0.1), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.balloon:nth-child(5) {
+  background: linear-gradient(135deg, #FBBF24, #F59E0B);
+  box-shadow: inset -10px -10px 20px rgba(0,0,0,0.1), 0 0 20px rgba(251, 191, 36, 0.4);
+}
+
+.balloon:nth-child(6) {
+  background: linear-gradient(135deg, #A78BFA, #8B5CF6);
+  box-shadow: inset -10px -10px 20px rgba(0,0,0,0.1), 0 0 20px rgba(167, 139, 250, 0.4);
+}
+
+.balloon::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 20px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent);
+}
+
+/* Плавная анимация появления */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Медленный bounce */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+
+/* Градиенты для золотого цвета */
+.bg-gold {
+  background: #D4AF37;
+}
+
+.bg-gold-50 {
+  background: #FEF9E7;
+}
+
+.bg-gold-200 {
+  background: #F9E79F;
+}
+
+.bg-gold-600 {
+  background: #B8860B;
+}
+
+.bg-gold-700 {
+  background: #9B7109;
+}
+
+.text-gold {
+  color: #D4AF37;
+}
+
+.border-gold {
+  border-color: #D4AF37;
+}
+
+.hover\:text-gold:hover {
+  color: #D4AF37;
+}
+
+.hover\:bg-gold-600:hover {
+  background: #B8860B;
+}
+
+.hover\:from-gold-600:hover {
+  --tw-gradient-from: #B8860B;
+}
+
+.hover\:to-gold-700:hover {
+  --tw-gradient-to: #9B7109;
+}
