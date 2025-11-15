@@ -88,6 +88,18 @@ code {
     }
 
     [data-debug-wrapper="true"] > * {
+
+/* Скрыть кнопку Made with Emergent */
+iframe[title*="emergent"],
+div[class*="emergent"],
+button:has-text("Made with Emergent"),
+a:has-text("Made with Emergent") {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
         margin-left: inherit;
         margin-right: inherit;
         margin-top: inherit;
