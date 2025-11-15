@@ -16,3 +16,16 @@ html {
 body {
   overflow-x: hidden;
 }
+
+/* Скрываем кнопку Made with Emergent */
+[class*="Made with Emergent"],
+a[href*="emergent"]:has-text("Made with Emergent"),
+div:has-text("Made with Emergent") {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Скрываем элементы с текстом Made with Emergent */
+body *:has-text("Made with Emergent") {
+  display: none !important;
+}
