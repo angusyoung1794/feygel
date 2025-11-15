@@ -336,8 +336,8 @@ const HomePage = () => {
               <p className="text-xl font-semibold text-purple-600 mb-8">
                 С Мелеховым ваш праздник станет по-настоящему уникальным шоу!
               </p>
-              <Button size="lg" className="bg-gradient-to-r from-gold to-gold-600 hover:from-gold-600 hover:to-gold-700 text-gray-900 px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300">
-                <a href="https://wa.me/79257558584">
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <a href="https://wa.me/79257558584" className="text-white">
                   Расскажите нам о вашей мечте
                 </a>
               </Button>
