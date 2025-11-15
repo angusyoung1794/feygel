@@ -242,3 +242,21 @@
 .hover\:to-gold-700:hover {
   --tw-gradient-to: #9B7109;
 }
+
+/* Скрыть кнопку Made with Emergent - финальное решение */
+body > div:last-child,
+body > button:last-child,
+[class*="fixed"]:has-text("Made"),
+[class*="fixed"]:has-text("Emergent") {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -9999 !important;
+}
+
+/* Скрыть все элементы в правом нижнем углу, содержащие логотип */
+div[style*="position: fixed"][style*="bottom"],
+div[style*="position: fixed"][style*="right"] {
+  display: none !important;
+}
