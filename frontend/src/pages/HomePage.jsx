@@ -140,7 +140,7 @@ const HomePage = () => {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-3">
               <img 
-                src="https://customer-assets.emergentagent.com/job_d188e8db-000d-41c1-9132-bdda2dba90ff/artifacts/aat2wkim_%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF.jpg" 
+                src="логотип.jpg" 
                 alt="Feygel Event" 
                 className="h-12 w-12 object-contain"
               />
@@ -285,21 +285,21 @@ const HomePage = () => {
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <img 
-                src="https://customer-assets.emergentagent.com/job_d188e8db-000d-41c1-9132-bdda2dba90ff/artifacts/y5of7vel_%D1%81%D0%B2%D0%B0%D0%B4%D1%8C%D0%BC%D0%B0.jpg" 
+                src="свадьма.jpg" 
                 alt="Свадьба" 
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <img 
-                src="https://customer-assets.emergentagent.com/job_d188e8db-000d-41c1-9132-bdda2dba90ff/artifacts/u895tewj_%D1%88%D0%B0%D1%80%D0%B8%D0%BA%D0%B8.jpeg" 
+                src="шарики.jpeg" 
                 alt="Воздушные шары" 
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <img 
-                src="https://customer-assets.emergentagent.com/job_d188e8db-000d-41c1-9132-bdda2dba90ff/artifacts/ujkod0a0_%D1%84%D0%BB%D0%B0%D0%B6%D0%BA%D0%B8.jpg" 
+                src="флажки.jpg" 
                 alt="Декор" 
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
               />
