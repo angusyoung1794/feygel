@@ -1,0 +1,27 @@
+# robots.txt для Feygel Event
+
+# Разрешаем индексацию всем поисковым роботам
+User-agent: *
+Allow: /
+
+# Запрещаем индексацию служебных файлов
+Disallow: /static/js/
+Disallow: /static/css/
+Disallow: /*.json$
+
+# Специальные правила для Яндекса
+User-agent: Yandex
+Allow: /
+
+# Специальные правила для Google
+User-agent: Googlebot
+Allow: /
+
+# Указываем расположение карты сайта
+Sitemap: https://angusyoung1794.github.io/feygel/sitemap.xml
+
+# Дополнительные директивы
+Host: https://angusyoung1794.github.io/feygel/
+
+# Ограничение частоты обхода (опционально)
+Crawl-delay: 1
