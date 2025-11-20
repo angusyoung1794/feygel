@@ -243,6 +243,19 @@
   --tw-gradient-to: #9B7109;
 }
 
+/* Светло-золотой градиентный фон */
+.from-amber-50 {
+  --tw-gradient-from: #FFFBEB;
+}
+
+.via-yellow-50 {
+  --tw-gradient-via: #FEFCE8;
+}
+
+.to-gold-50 {
+  --tw-gradient-to: #FEF9E7;
+}
+
 /* Скрыть кнопку Made with Emergent - финальное решение */
 body > div:last-child,
 body > button:last-child,
