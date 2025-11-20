@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Sparkles, Lightbulb, Palette, ScrollText, Mic2, Zap, Users, Calendar, Briefcase, PartyPopper } from 'lucide-react';
+import { Sparkles, Lightbulb, Palette, ScrollText, Mic2, Zap, Users, Calendar, Briefcase, PartyPopper, Facebook } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 
@@ -89,7 +89,7 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white overflow-hidden relative">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-gold-50 overflow-hidden relative">
       {/* Салют при загрузке */}
       {showFireworks && (
         <div className="fixed inset-0 z-50 pointer-events-none">
@@ -160,7 +160,7 @@ const HomePage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-white to-gold-50">
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -211,7 +211,7 @@ const HomePage = () => {
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="group hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-purple-300 bg-gradient-to-br from-white to-purple-50"
+                className="group hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-purple-300 bg-white/80 backdrop-blur-sm"
               >
                 <CardContent className="p-8">
                   <div className="mb-6 text-purple-600 group-hover:text-gold transition-colors duration-300 transform group-hover:scale-110">
@@ -314,27 +314,28 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                Ведущий — актёр <span className="bg-gradient-to-r from-purple-600 to-gold bg-clip-text text-transparent">Мелехов</span>
+                Ведущий для вашего <span className="bg-gradient-to-r from-purple-600 to-gold bg-clip-text text-transparent">мероприятия</span>
               </h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                Придадим вашему мероприятию особый шарм и энергетику. Наш ведущий — актёр Мелехов — это гарантия:
+                Придадим вашему празднику особый шарм и энергетику. Наши ведущие — профессионалы с актёрским мастерством и яркой подачей. 
+                Например, актёр Мелехов — один из тех, кто способен:
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
                   <Sparkles className="w-6 h-6 text-gold mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-gray-700">Харизмы и стиля, которые захватят внимание гостей</span>
+                  <span className="text-lg text-gray-700">Привнести харизму и стиль, которые сразу захватывают внимание гостей</span>
                 </li>
                 <li className="flex items-start">
                   <Sparkles className="w-6 h-6 text-gold mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-gray-700">Импровизации и тонкого юмора по ситуации</span>
+                  <span className="text-lg text-gray-700">Легко импровизировать и тонко шутить по ситуации</span>
                 </li>
                 <li className="flex items-start">
                   <Sparkles className="w-6 h-6 text-gold mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-gray-700">Ярких эмоций и динамичного сценария</span>
+                  <span className="text-lg text-gray-700">Создавать яркие эмоции и поддерживать динамику всего события</span>
                 </li>
               </ul>
               <p className="text-xl font-semibold text-purple-600 mb-8">
-                С Мелеховым ваш праздник станет по-настоящему уникальным шоу!
+                С таким подходом любое мероприятие превращается в по-настоящему уникальное шоу!
               </p>
               <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300">
                 <a href="https://wa.me/79257558584" className="text-white">
@@ -409,14 +410,28 @@ const HomePage = () => {
             
             <div>
               <h3 className="text-lg font-bold mb-4 text-gold">Социальные сети</h3>
-              <a 
-                href="https://instagram.com/feygel_event" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-gold transition-colors inline-block"
-              >
-                Instagram: @feygel_event
-              </a>
+              <div className="space-y-3">
+                <a 
+                  href="https://instagram.com/feygel_event" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-gold transition-colors flex items-center space-x-2"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" fillRule="evenodd"></path>
+                  </svg>
+                  <span>Instagram: @feygel_event</span>
+                </a>
+                <a 
+                  href="https://www.facebook.com/feygelevent/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-gold transition-colors flex items-center space-x-2"
+                >
+                  <Facebook className="w-5 h-5" />
+                  <span>Facebook: Feygel Event</span>
+                </a>
+              </div>
             </div>
           </div>
           
