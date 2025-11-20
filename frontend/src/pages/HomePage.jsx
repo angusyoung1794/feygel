@@ -211,7 +211,7 @@ const HomePage = () => {
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="group hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-purple-300 bg-gradient-to-br from-white to-purple-50"
+                className="group hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-purple-300 bg-white/80 backdrop-blur-sm"
               >
                 <CardContent className="p-8">
                   <div className="mb-6 text-purple-600 group-hover:text-gold transition-colors duration-300 transform group-hover:scale-110">
