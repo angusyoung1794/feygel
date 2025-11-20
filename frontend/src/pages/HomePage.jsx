@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Sparkles, Lightbulb, Palette, ScrollText, Mic2, Zap, Users, Calendar, Briefcase, PartyPopper } from 'lucide-react';
+import { Sparkles, Lightbulb, Palette, ScrollText, Mic2, Zap, Users, Calendar, Briefcase, PartyPopper, Facebook } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 
