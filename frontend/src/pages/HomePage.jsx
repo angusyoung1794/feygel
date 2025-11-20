@@ -89,7 +89,7 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white overflow-hidden relative">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-gold-50 overflow-hidden relative">
       {/* Салют при загрузке */}
       {showFireworks && (
         <div className="fixed inset-0 z-50 pointer-events-none">
