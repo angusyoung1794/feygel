@@ -314,27 +314,28 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                Ведущий — актёр <span className="bg-gradient-to-r from-purple-600 to-gold bg-clip-text text-transparent">Мелехов</span>
+                Ведущий для вашего <span className="bg-gradient-to-r from-purple-600 to-gold bg-clip-text text-transparent">мероприятия</span>
               </h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                Придадим вашему мероприятию особый шарм и энергетику. Наш ведущий — актёр Мелехов — это гарантия:
+                Придадим вашему празднику особый шарм и энергетику. Наши ведущие — профессионалы с актёрским мастерством и яркой подачей. 
+                Например, актёр Мелехов — один из тех, кто способен:
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
                   <Sparkles className="w-6 h-6 text-gold mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-gray-700">Харизмы и стиля, которые захватят внимание гостей</span>
+                  <span className="text-lg text-gray-700">Привнести харизму и стиль, которые сразу захватывают внимание гостей</span>
                 </li>
                 <li className="flex items-start">
                   <Sparkles className="w-6 h-6 text-gold mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-gray-700">Импровизации и тонкого юмора по ситуации</span>
+                  <span className="text-lg text-gray-700">Легко импровизировать и тонко шутить по ситуации</span>
                 </li>
                 <li className="flex items-start">
                   <Sparkles className="w-6 h-6 text-gold mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-gray-700">Ярких эмоций и динамичного сценария</span>
+                  <span className="text-lg text-gray-700">Создавать яркие эмоции и поддерживать динамику всего события</span>
                 </li>
               </ul>
               <p className="text-xl font-semibold text-purple-600 mb-8">
-                С Мелеховым ваш праздник станет по-настоящему уникальным шоу!
+                С таким подходом любое мероприятие превращается в по-настоящему уникальное шоу!
               </p>
               <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300">
                 <a href="https://wa.me/79257558584" className="text-white">
